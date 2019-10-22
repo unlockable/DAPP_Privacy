@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <br>
+            <div class="row">
+                <div style="margin-left: auto; margin-right: auto; text-align: center; margin-bottom: 40px;" >
+                    <h1 style='color: #f65656'>Auction Contracts System</h1>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Deploy contract address</h3>
+                    <form id="deploy">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="fromAddress" value="From wallet address" onfocus="this.value=''">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="privateKey" value="Private Key" onfocus="this.value=''">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="itemId" value="Item ID" onfocus="this.value=''">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="minBid" value="Starting Price(ether)" onfocus="this.value=''">
+                        </div>
+                        <p id="message" style="word-wrap: break-word; font-size:12px;"></p>
+                        <input type="submit" value="Deploy" class="btn btn-primary" />
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h3>Bid on a contract</h3>
+                    <form id="bid">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="fromAddress" value="From wallet address" onfocus="this.value=''">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="privateKey" value="Private Key" onfocus="this.value=''">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="contractAddress" value="Contract Address" onfocus="this.value=''">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="price" value="Bidding Price(ether)" onfocus="this.value=''">
+                        </div>
+                        <p id="message" style="word-wrap: break-word; font-size:12px;"></p>
+                        <input type="submit" value="Bid" class="btn btn-primary" />
+                    </form>
+                    <br /><br /><br /><br />
+                </div>
+                <div class="col-md-4">
+                    <h3>Result</h3>
+                    <form id="find">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="contractAddress" value="Contract Address" onfocus="this.value=''">
+                        </div>
+                        <p id="message" style="word-wrap: break-word; font-size:12px;"></p>
+                        <input type="submit" value="Find" class="btn btn-primary" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+		<script type="text/javascript" src="/js/bignumber.js"></script>
+		<script type="text/javascript" src="/js/web3.js"></script>
+        <script type="text/javascript" src="/js/ethereumjs-tx.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
+    </body>
+</html>
